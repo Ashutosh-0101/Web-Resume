@@ -15,7 +15,11 @@ background-repeat: no-repeat;
 background-size: 100% 100%;
 padding: 50px 0px;
 }
-
+@media(max-width: 768px){
+  #container{
+      padding: 0;
+  }
+}
 #main-nav{
   width: 1259px;
   margin: 0px auto 15px;
@@ -100,6 +104,45 @@ width: 100%;
 height: 100%;
 
 }
+
+/* Breakpoints */
+@media(max-width: 1400px){
+  .wrapper , #main-nav{
+      width: 950px;
+  }
+
+}
+
+@media(max-width: 1200px){
+  .wrapper , #main-nav{
+      width: 970px;
+  }
+  
+}
+
+@media(max-width: 992px){
+  .wrapper , #main-nav{
+      width: 760px;
+  }   
+}
+
+@media(max-width: 768px){
+  .wrapper , #main-nav{
+      width: 100%;
+  }   
+  .wrapper{
+      height: 100%;
+  }
+  .wrapper > .row{
+      position: static;
+      width: 100%;
+      height: auto;
+  }
+}
+
+
+
+
 .intro{
 text-align: center;
 height: 100%;
@@ -121,6 +164,32 @@ list-style: none;
 display: flex;
 justify-content: space-evenly;
 }
+
+
+@media(max-width:768px){
+  .intro{
+      display: none;
+  }
+}
+.content{
+  position: relative;
+  overflow-x: hidden;
+  perspective: 400px;
+}
+
+@media(max-width:768px){
+  .content{
+      position: absolute;
+      top: 0px;
+      width: 100%;
+  }
+}
+
+
+
+
+
+
 .content{
 position: relative;
 overflow-x:hidden ;
@@ -155,6 +224,17 @@ color: #ffffffa3;
   transition-duration: 1.5s;
   transform: translateX(-100%);
 }
+
+@media(max-width:768px) {
+  #home h1{
+      font-size: 3em;
+      color: #ffffffc2;
+  }
+  #home img{
+      display: inline-block;
+  }
+}
+
 #about h2 ,#skills h2 ,#projects h2,#contact h2{
 letter-spacing: 2px;
 padding-bottom: 20px;
@@ -178,6 +258,22 @@ font: 2em ;
 #about h4{
 font: 3em;
 }
+
+@media(max-width:1200px){
+  #about ul li {
+      font-size: 0.8em;
+  }
+}
+
+@media(max-width:1000px){
+  #profile-pic h4 {
+      font-size: 0.6em;
+  }
+}
+
+
+
+
 .timeline{
 position:relative;
 }
@@ -306,6 +402,19 @@ border-radius: 20px;
 background-color: orange;
 animation: progressbar 2s linear;
 }
+
+
+@keyframes progressbar {
+  from{
+      width: 0%;
+  }
+  to{
+      width: 100%;
+  }
+}
+
+
+
 /* projects */
 #projects .card{
   color: #000;
